@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hksyari Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+         <div class="logo"><img src="assets/logo.png" class="logo-img"></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a class="nav-link" href="">Travel Packages</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><button class="btn">Masuk</button></li>
+        </ul>
+    </header>
+
+    <!-- HERO SECTION -->
+     <section class="hero">
+    <video autoplay muted loop id="heroVideo">
+        <source src="assets/latarbelakang.mp4" type="video/mp4">
+    </video>
+    </section>
+
+    <script>
+    const video = document.getElementById("heroVideo");
+
+    video.addEventListener("loadedmetadata", function() {
+        video.currentTime = 22; 
+    });
+    </script>
+
+        <div class="hero-text">
+            <h3>Welcome to HKSyari Trip</h3>
+            <h1>Menjelajah Alam, Mendekat kepada Allah</h1>
+            <p>Pengalaman perjalanan yang tidak hanya menghadirkan keindahan destinasi, tetapi juga menguatkan hati,<br>
+                memperluas wawasan sejarah Islam, menjaga nilai halal, serta memberikan ketenangan dalam setiap langkah perjalanan Anda.</p>
+        </div>
+    </section>
+
+
+
+<iframe src="slogan.html" 
+        width="100%" 
+        height="280px"  
+        frameborder="0" 
+        scrolling="no" 
+        title="Slogan Content"
+        style="margin-top: -100px; position: relative; z-index: 10; border: none;">
+</iframe>
+
+
+<iframe src="Aboutus.html" 
+        width="100%" 
+        height="1200px" 
+        frameborder="0" 
+        scrolling="no" 
+        title="Travel">
+</iframe>
+
+
+<iframe src="TravelPackages.html" 
+        width="100%" 
+        height="1050px" 
+        frameborder="0" 
+        scrolling="no" 
+        title="Travel">
+</iframe>
+
+
+</body>
+</html>

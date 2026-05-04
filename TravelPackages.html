@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Perjalanan | HKSyari Trip</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+       .aspect-square {
+        /* Rasio 4:3 (Tinggi 3 unit untuk Lebar 4 unit) */
+        aspect-ratio: 4 / 3; 
+        height: 100%; 
+         }
+
+        /* Aspek Rasio untuk Kartu Persegi Panjang (2:1 atau 16:9) */
+       .aspect-rect {
+        /* Rasio 8:3 (Tinggi yang sama (3 unit) untuk Lebar 8 unit) */
+        aspect-ratio: 8 / 3;
+        height: 100%; 
+        }
+
+        /* Pastikan gambar mengisi Card */
+        .destination-card img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; /* Penting untuk memotong agar pas */
+            filter: brightness(70%);
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        /* Gabungkan properti dasar ke kelas induk */
+        .destination-card {
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            height: 100%;
+            /* Tambahkan box-shadow default agar ada bayangan awal */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: box-shadow 0.3s ease; /* Transisi untuk box-shadow saja */
+        }
+
+        
+        /* Efek hover opsional */
+        .destination-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        /* Memastikan filter brightness diterapkan pada gambar */
+        .destination-card img {
+            height: 100%; /* Wajib: Gambar mengambil 100% tinggi Card */
+            width: 100%;  /* Wajib: Gambar mengambil 100% lebar Card */
+        
+        /* Penting: Memotong gambar agar sesuai dengan aspek rasio tanpa distorsi */
+            object-fit: cover;
+            filter: brightness(70%);
+            transition: transform 0.8s ease, filter 0.8s ease;
+        }
+
+        .destination-card:hover img {
+        /* Kecerahan ditingkatkan saat hover (dari 70% menjadi 85%) */
+        transform: scale(1.20);
+        filter: brightness(50%);  
+        }
+      
+
+        .caption-h2 {
+        font-size: 18px;
+        font-weight: 200;
+        
+        /* 1. Atur Lebar Maksimum */
+        /* Sesuaikan nilai ini agar sama dengan lebar total baris kartu (biasanya 100% dari .container) */
+        max-width: 1000px; /* Nilai perkiraan, bisa disesuaikan */
+        
+        /* 2. Pusatkan Teks */
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+       }
+
+        .container {
+        /* Penting: Pastikan lebar maksimum tidak terlalu besar (agar margin terlihat) */
+        max-width: 1600px; 
+        padding: 25px 150px 50px;
+        background-color: #EBF2FF;
+        }
+
+        
+
+       
+
+        
+    </style>
+</head>
+<body>
+    
+
+    <section class="container my-5">
+    <h2 class="text-center mb-4" style="font-size: 2.5em; font-weight: bold; color: #333;">Travel Packages</h2>
+    <h2 class="text-center mb-5 caption-h2"><b>Saksikan keagungan ciptaan Allah dalam beragam destinasi menakjubkan di seluruh dunia. Rasakan pesona setiap musim sebagai bukti kebesaran-Nya di setiap langkah perjalanan Anda yang penuh makna bersama #HKSyariTrip!</b></h2>
+    
+<div class="row g-4 justify-content-center">
+
+    <div class="col-lg-8 col-md-12">
+        <a href="Package.html" class="text-decoration-none" target="_blank">
+            <div class="card bg-dark text-white destination-card aspect-rect"> 
+                <img src="assets/toursejarah.webp" class="card-img" alt="Tour Sejarah Islam">
+                <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                    <h5 class="card-title fw-bold fs-4 mb-1">Tour Sejarah Islam</h5>
+                    <p class="card-text text-white-50">Trip ke Jejak Rasul & Sahabat</p>
+                </div>
+            </div>
+         </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <div class="card bg-dark text-white destination-card aspect-square"> 
+            <img src="assets/haji.jpg" class="card-img" alt="Ibadah Haji Khusus">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                <h5 class="card-title fw-bold fs-4 mb-1">Haji Khusus</h5>
+                <p class="card-text text-white-50">Lihat Paket Haji Resmi</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <div class="card bg-dark text-white destination-card aspect-square"> 
+            <img src="assets/inter.jpg" class="card-img" alt="Wisata Halal Internasional">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                <h5 class="card-title fw-bold fs-4 mb-1">Wisata Halal Internasional</h5>
+                <p class="card-text text-white-50">150+ Trip Luar Negeri</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <div class="card bg-dark text-white destination-card aspect-square">
+            <img src="assets/indo.jpg" class="card-img" alt="Wisata Halal Domestik">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                <h5 class="card-title fw-bold fs-4 mb-1">Wisata Halal Domestik</h5>
+                <p class="card-text text-white-50">Jelajah Nusantara Halal</p>
+            </div>
+        </div>
+    </div>
+    
+   <div class="col-lg-4 col-md-6">
+    <a href="" class="text-decoration-none">
+        <div class="card bg-dark text-white destination-card aspect-square"> 
+            <img src="assets/Umrohh.jpg" class="card-img" alt="Umrah">
+
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+                <h5 class="card-title fw-bold fs-4 mb-1 text-white">Umrah</h5>
+                <p class="card-text text-white-50">Lihat 50+ Paket Ibadah</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+    
+    
+</div>
+</section>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<iframe src="footer.html" 
+        width="100%" 
+        height="95px" 
+        frameborder="0" 
+        scrolling="no" 
+        title="Travel">
+</iframe>
+
+</body>
+</html>

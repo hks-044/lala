@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hksyari Trip — Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Marck+Script&display=swap" rel="stylesheet">
+  <style>
+    /* =============================== */
+    /*   Gaya dasar dan warna utama    */
+    /* =============================== */
+    :root{--accent:#0b5a4a; /* warna aksen (teal gelap) */ --muted:#6b6b6b; --line:#e9e9e9; --bg:#ffffff}
+    *{box-sizing:border-box}
+    body{margin:0;background:#fff;font-family:'Montserrat',Arial,Helvetica,sans-serif;color:#111}
+
+    /* =============================== */
+    /*        Bagian Header            */
+    /* =============================== */
+    header{padding:10px 20px 10px;text-align:center}
+    header h1{margin:0;font: size 2.5em;;letter-spacing:0.5px}
+    .breadcrumb{font-size:12px;color:var(--muted);margin-top:8px}
+    .subtitle{margin-top:26px;color:var(--muted);font-size:18px}
+
+    /* container lebar */
+    .wrap{max-width:1100px;margin:0 auto}
+
+    /* =============================== */
+    /*    Area utama dan accordion     */
+    /* =============================== */
+    main{padding:10px 24px}
+
+    .accordion{margin-top:18px;border-radius:6px;overflow:hidden}
+    /* bar judul tiap item */
+    .acc-item{display:flex;align-items:center;justify-content:space-between;padding:15px 28px;border-bottom:1px solid var(--line);cursor:pointer}
+    .acc-item h3{margin:0;font-size:17px;font-weight:600;color:#111}
+
+    /* panah (ikon) */
+    .accordion-arrow{font-size:22px;display:inline-block;transition:transform .2s ease;color:#111}
+
+    /* konten tersembunyi tiap item (default tertutup) */
+    .acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s ease}
+    /* saat terbuka beri garis bawah aksen dan padding */
+    .acc-body.open{padding:18px 28px 28px;border-top:3px solid var(--accent);}
+
+    /* gaya teks di dalam body */
+    .acc-body .info{color:var(--muted);line-height:1.8;font-size:14px}
+    .acc-body .info strong{color:#111}
+
+    /* sudut membulat bagian bawah */
+    .acc-item:last-of-type{border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+
+    @media (max-width:900px){header h1{font-size:10px}.acc-item h3{font-size:18px}}
+  </style>
+</head>
+<body>
+    
+  <header>
+    <div class="wrap">
+      <h1>Contact</h1>
+      <!-- Judul Arab -->
+      <div style="font-size:32px; margin-top:6px; font-family:'Amiri', serif; color:#0b5a4a;">
+        اتصل بنا
+      </div>
+      <div class="breadcrumb">HUBUNGI KAMI</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Accordion dengan detail informasi layanan di bawah judulnya
+         Komentar: setiap .acc-item adalah bar yang bisa diklik; .acc-body menyimpan detail. -->
+    <div class="accordion" id="accordion">
+
+      <!-- ITEM 1: Layanan Tour Sejarah Islam -->
+      <div class="acc-item" data-target="body1">
+        <h3>Layanan Tour Sejarah Islam</h3>
+        <span class="accordion-arrow">⌵</span>
+      </div>
+      <div class="acc-body" id="body1">
+        <!-- class .info berisi alamat, kontak, jam operasional seperti contoh gambar -->
+        <div class="info">
+          <strong>Alamat:</strong><br>
+          Jl. Ir. H. Juanda III No. 2, Makassar 10120<br><br>
+
+          <strong>Telepon:</strong> (021) 2350 9999<br>
+          <strong>Email:</strong> sejarahislam@hksyaritrip.id<br><br>
+
+          <strong>Jam Operasional:</strong><br>
+          Senin - Jumat, 08.30 - 17.30 WIB
+        </div>
+      </div>
+
+      <!-- ITEM 2: Layanan Haji Khusus -->
+      <div class="acc-item" data-target="body2">
+        <h3>Layanan Haji Khusus</h3>
+        <span class="accordion-arrow">⌵</span>
+      </div>
+      <div class="acc-body" id="body2">
+        <div class="info">
+          <strong>Alamat:</strong><br>
+          Jl. Merdeka Selatan No. 10, Makassar 10110<br><br>
+
+          <strong>Telepon:</strong> (021) 2455 1122<br>
+          <strong>Email:</strong> hajikhusus@hksyaritrip.id<br><br>
+
+          <strong>Jam Operasional:</strong><br>
+          Senin - Jumat, 09.00 - 17.00 WIB
+        </div>
+      </div>
+
+      <!-- ITEM 3: Layanan Umrah -->
+      <div class="acc-item" data-target="body3">
+        <h3>Layanan Umrah</h3>
+        <span class="accordion-arrow">⌵</span>
+      </div>
+      <div class="acc-body" id="body3">
+        <div class="info">
+          <strong>Alamat:</strong><br>
+          Jl. Kebahagiaan No. 45A, Makassar 12240<br><br>
+
+          <strong>Telepon:</strong> (021) 6677 3344<br>
+          <strong>Email:</strong> umrah@hksyaritrip.id<br><br>
+
+          <strong>Jam Operasional:</strong><br>
+          Senin - Jumat, 08.00 - 16.30 WIB
+        </div>
+      </div>
+
+      <!-- ITEM 4: Layanan Wisata Halal -->
+      <div class="acc-item" data-target="body4">
+        <h3>Layanan Wisata Halal</h3>
+        <span class="accordion-arrow">⌵</span>
+      </div>
+      <div class="acc-body" id="body4">
+        <div class="info">
+          <strong>Alamat:</strong><br>
+          Jl. Bahagia Indah No. 7, Makassar 17121<br><br>
+
+          <strong>Telepon:</strong> (021) 7788 5566<br>
+          <strong>Email:</strong> halal@hksyaritrip.id<br><br>
+
+          <strong>Jam Operasional:</strong><br>
+          Senin - Sabtu, 09.00 - 18.00 WIB
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+  // ===============================
+  //  Script accordion (dengan komentar bahasa Indonesia)
+  //  - Tidak ada item yang terbuka otomatis
+  //  - Satu klik langsung membuka konten terkait
+  //  - Hanya satu item terbuka pada satu waktu
+  // ===============================
+
+  document.querySelectorAll('.acc-item').forEach(item=>{
+    item.addEventListener('click',()=>{
+      const targetId = item.getAttribute('data-target');
+      const body = document.getElementById(targetId);
+      const arrow = item.querySelector('.accordion-arrow');
+
+      if(!body) return;
+
+      const isOpen = body.classList.contains('open');
+
+      // Tutup semua body
+      document.querySelectorAll('.acc-body').forEach(b=>{
+        b.classList.remove('open');
+        b.style.maxHeight = null;
+      });
+
+      // Reset semua panah
+      document.querySelectorAll('.accordion-arrow').forEach(a=>{
+        a.style.transform = 'rotate(0)';
+      });
+
+      // Jika sebelumnya tertutup → buka
+      if(!isOpen){
+        body.classList.add('open');
+
+        // Delay kecil supaya scrollHeight terbaca sempurna (fix jam operasional tidak muncul)
+        setTimeout(()=>{
+          body.style.maxHeight = body.scrollHeight + 'px';
+        }, 50);
+
+        arrow.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
